@@ -17,7 +17,7 @@ WHERE pid = 11;
 SELECT pg_terminate_backend('10423');
 
 
-# Find all Transactions holding locks on a table
+-- Find all Transactions holding locks on a table
 
 SELECT
     pg_stat_activity.pid,
@@ -38,9 +38,8 @@ WHERE
         SELECT oid FROM pg_database WHERE datname = 'db_name'
     );
     
-============
 
-Find Long running transactions:
+-- Find Long running transactions:
 
 SELECT
     pid,
